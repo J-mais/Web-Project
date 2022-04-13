@@ -158,7 +158,7 @@ function CheckGuess() {
 
 function PlayGame() { //function start
 	const playagain = document.getElementById('playagainBtn');
-	comCorn = Math.floor(Math.random() * 99) + 1; //generating number of computer's corn kernels
+	comCorn = Math.floor(Math.random() * compBounty) + 1; //generating number of computer's corn kernels
 	chances = 3
 	var startGameAudio = new Audio('sounds/start.wav')
 	startGameAudio.play();
@@ -172,7 +172,7 @@ function PlayGame() { //function start
 	})
 
 	document.getElementById("game-content").innerHTML = (
-		`Hi! We have selected a random number between 1 and ${play1Bounty}. You have 3 chances to guess the correct number. You will be advised if your guess was too high or low. Good luck!<br><br>` +
+		`Hi! We have selected a random number between 1 and ${compBounty}. You have 3 chances to guess the correct number. You have ${play1Bounty} corn kernels. You will be advised if your guess was too high or low. Good luck!<br><br>` +
 		`<em>Random number = ${comCorn}</em>` // TEST - SHOULD BE REMOVED
 	)
 
